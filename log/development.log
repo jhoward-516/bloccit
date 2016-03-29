@@ -43,3 +43,15 @@ Started GET "/welcome/about" for 75.38.127.138 at 2016-03-29 03:37:29 +0000
 Processing by WelcomeController#about as HTML
   Rendered welcome/about.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 142ms (Views: 140.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-03-29 03:49:54 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 335ms (Views: 310.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/contact" for 75.38.127.138 at 2016-03-29 03:50:08 +0000
+Processing by WelcomeController#contact as HTML
+  Rendered welcome/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
