@@ -43,3 +43,185 @@ Started GET "/welcome/about" for 75.38.127.138 at 2016-03-29 03:37:29 +0000
 Processing by WelcomeController#about as HTML
   Rendered welcome/about.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 142ms (Views: 140.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-03-30 02:55:14 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 317ms (Views: 302.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 75.38.127.138 at 2016-03-30 02:55:20 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 75.38.127.138 at 2016-03-30 02:55:22 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 75.38.127.138 at 2016-03-30 02:55:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-03-30 02:57:58 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 427ms (Views: 412.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-ff81e5992c9ba7a21d94262c7fc3249acba3faba20ce114f9002b2be806185b8.css?body=1" for 75.38.127.138 at 2016-03-30 02:57:59 +0000
+
+
+Started GET "/welcome/about" for 75.38.127.138 at 2016-03-30 02:58:02 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 75.38.127.138 at 2016-03-30 02:58:03 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 75.38.127.138 at 2016-03-30 03:01:34 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 221ms (Views: 220.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 75.38.127.138 at 2016-03-30 03:01:34 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-d214ae935316bcc29b9a0bd673a80759778295ccf236d775f72df24e234bf29e.css?body=1" for 75.38.127.138 at 2016-03-30 03:01:35 +0000
+
+
+Started GET "/welcome/about" for 75.38.127.138 at 2016-03-30 03:01:41 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 75.38.127.138 at 2016-03-30 03:01:42 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 75.38.127.138 at 2016-03-30 03:05:15 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-42361ece4d0e37251b4946e3b27855284f5f227564b5a7a580c863416224eccf.css?body=1" for 75.38.127.138 at 2016-03-30 03:05:15 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 75.38.127.138 at 2016-03-30 03:05:15 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 75.38.127.138 at 2016-03-30 03:05:15 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-03-30 03:05:15 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 75.38.127.138 at 2016-03-30 03:05:15 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 75.38.127.138 at 2016-03-30 03:05:15 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 75.38.127.138 at 2016-03-30 03:05:15 +0000
+
+
+Started GET "/welcome/index" for 75.38.127.138 at 2016-03-30 03:09:07 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after "...5px 5px 5px 5px": expected ";", was "];"):
+    2: <html>
+    3: <head>
+    4:   <title>Bloccit</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/welcome.scss:26
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__4306688634042533341_21418120'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (45.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (177.6ms)
+
+
+Started GET "/welcome/index" for 75.38.127.138 at 2016-03-30 03:09:47 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-cb00159cf3fc20f91ee887f15009a7b45d37e7d569c96b54dd451a467e5b7824.css?body=1" for 75.38.127.138 at 2016-03-30 03:09:47 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 75.38.127.138 at 2016-03-30 03:09:47 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 75.38.127.138 at 2016-03-30 03:09:47 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 75.38.127.138 at 2016-03-30 03:09:47 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 75.38.127.138 at 2016-03-30 03:09:47 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-03-30 03:09:47 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 75.38.127.138 at 2016-03-30 03:09:47 +0000
+
+
+Started GET "/" for 75.38.127.138 at 2016-03-30 03:19:42 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 5196ms (Views: 5176.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-0c81e2bfbfd877dea9bd6e3035ab1a9860bc2d0a7d17503c2d2df6d3755dcd29.css?body=1" for 75.38.127.138 at 2016-03-30 03:19:48 +0000
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 75.38.127.138 at 2016-03-30 03:19:48 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 75.38.127.138 at 2016-03-30 03:19:49 +0000
+
+
+Started GET "/welcome/about" for 75.38.127.138 at 2016-03-30 03:20:02 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 68ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 75.38.127.138 at 2016-03-30 03:20:03 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 75.38.127.138 at 2016-03-30 03:20:04 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 110ms (Views: 108.9ms | ActiveRecord: 0.0ms)
