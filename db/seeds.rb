@@ -7,6 +7,8 @@ require "random_data"
         )
     end
 
+Post.find_or_create_by(title: "Unique Test Title", body: "Unique Test Body Example.")
+
 posts = Post.all
 
 100.times do
@@ -15,6 +17,8 @@ posts = Post.all
         body: RandomData.random_paragraph
         )
     end
+
+Comment.find_or_create_by(post: post_id(101), body: "First Unique Comment")   
     
 puts "Seeds finished."
 puts "#{Post.count} posts created."
