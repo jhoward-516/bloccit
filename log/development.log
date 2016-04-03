@@ -874,3 +874,9 @@ Processing by PostsController#show as HTML
   Parameters: {"id"=>"3"}
   Rendered posts/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 109ms (Views: 108.6ms | ActiveRecord: 0.0ms)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" ASC LIMIT 1[0m
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" ASC LIMIT 1[0m
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "posts" SET "title" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Unique test title"], ["body", "Unique paragraph body..."], ["updated_at", "2016-04-03 22:26:41.826077"], ["id", 1]]
+  [1m[35m (21.1ms)[0m  commit transaction
