@@ -3,25 +3,34 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :controller do
   let(:my_post) { Post.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph) }
 
-  describe "GET #index" do
+  describe "GET index" do
     it "returns http success" do
       get :index
       expect(response).to have_http_status(:success)
     end
-    it "assigns [my_post] to @posts"
+    
+    it "assigns [my_post] to @posts" do
       get :index
       expect(assigns(:posts)).to eq([my_post])
     end
+  end
 
+  describe "GET show" do
+    it "returns http success" do
+     get :show, {id: my_post.id}
+      expect(response).to have_http_status(:success)
+    end
+    it "renders the #show view" do
+      get :show, {id: my_post.id}
+      expect(response).to render_template :show
+    end
+    it "assigns my_post to @post" do
+      get :show, {id: my_post.id}
+      expect(assigns(:post)).to eq(my_post)
+    end
+  end
 
-  #describe "GET #show" do
-  #  it "returns http success" do
-  #   get :show
-  #    expect(response).to have_http_status(:success)
-  #  end
-  #end
-
-  describe "GET #new" do
+  describe "GET new" do
     it "returns http success" do
       get :new
       expect(response).to have_http_status(:success)
@@ -34,7 +43,7 @@ RSpec.describe PostsController, type: :controller do
     
     it "instantiates @post" do
       get :new
-      expect(assigns(:post)).not_to_be_nil
+      expect(assigns(:post)).not_to be_nil
     end
   end
     
@@ -50,7 +59,7 @@ RSpec.describe PostsController, type: :controller do
     
     it "redirects to the new post" do
       post :create, post: {title: RandomData.random_sentence, body: RandomData.random_paragraph}
-      exepect(response).to direct_to Post.last
+      expect(response).to redirect_to Post.last
     end
   end
   

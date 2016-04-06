@@ -933,3 +933,262 @@ ActionView::Template::Error (First argument in form cannot contain nil or be emp
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (95.8ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-05 02:19:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 463ms (Views: 446.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 75.38.127.138 at 2016-04-05 02:19:45 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 167ms (Views: 149.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/new" for 75.38.127.138 at 2016-04-05 02:19:47 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @post do |f| %>
+    2:     <%= f.label :title %>
+    3:     <%= f.text_field :title %>
+    4:     
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__1730327321405910697_70145386999040'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (30.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (95.1ms)
+
+
+Started GET "/posts/new" for 75.38.127.138 at 2016-04-05 02:21:53 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @post do |f| %>
+    2:     <%= f.label :title %>
+    3:     <%= f.text_field :title %>
+    4:     
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__1730327321405910697_43192560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (109.6ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-06 00:18:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 566ms (Views: 552.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 75.38.127.138 at 2016-04-06 00:18:48 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (190.0ms)
+Completed 200 OK in 318ms (Views: 300.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/new" for 75.38.127.138 at 2016-04-06 00:18:55 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (168.7ms)
+Completed 200 OK in 245ms (Views: 244.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-06 10:21:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 588ms (Views: 572.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 75.38.127.138 at 2016-04-06 10:22:03 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 162ms (Views: 142.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/new" for 75.38.127.138 at 2016-04-06 10:22:05 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 137ms (Views: 134.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 75.38.127.138 at 2016-04-06 10:27:37 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/layouts/application.html.erb:17: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...er.append=( if flash[:notice] );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_elsif, expecting ')'
+'.freeze;     elsif flash.now[:alert] 
+                   ^
+/home/ubuntu/workspace/app/views/layouts/application.html.erb:27: syntax error, unexpected keyword_elsif, expecting ')'
+'.freeze;     elsif flash[:alert] 
+                   ^
+/home/ubuntu/workspace/app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/home/ubuntu/workspace/app/views/layouts/application.html.erb:40: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/layouts/application.html.erb:42: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/layouts/application.html.erb:17: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_elsif, expecting ')'
+  app/views/layouts/application.html.erb:27: syntax error, unexpected keyword_elsif, expecting ')'
+  app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+  app/views/layouts/application.html.erb:40: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/layouts/application.html.erb:42: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.1ms)
+
+
+Started GET "/posts/new" for 75.38.127.138 at 2016-04-06 10:28:42 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 171ms (Views: 169.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-06 10:28:42 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-06 10:28:42 +0000
+
+
+Started GET "/assets/application.self-0c81e2bfbfd877dea9bd6e3035ab1a9860bc2d0a7d17503c2d2df6d3755dcd29.css?body=1" for 75.38.127.138 at 2016-04-06 10:28:42 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 75.38.127.138 at 2016-04-06 10:28:43 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 75.38.127.138 at 2016-04-06 10:28:43 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 75.38.127.138 at 2016-04-06 10:28:43 +0000
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 75.38.127.138 at 2016-04-06 10:28:43 +0000
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-06 10:28:43 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-06 10:28:43 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 75.38.127.138 at 2016-04-06 10:28:43 +0000
+
+
+Started POST "/posts" for 75.38.127.138 at 2016-04-06 10:29:12 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NdHjRqSem/R2bE5Hp/D3pR08NB1o1A12YWsxujMIPc4Jwxf0jD7M4Og68f5nbNuXGLYGlE0PHjloPUz8WXlXJw==", "post"=>{"title"=>"First Post", "body"=>"this is my first post, i like it the most"}, "commit"=>"Save"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "First Post"], ["body", "this is my first post, i like it the most"], ["created_at", "2016-04-06 10:29:12.677886"], ["updated_at", "2016-04-06 10:29:12.677886"]]
+  [1m[36m (13.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-johnhoward.c9users.io/posts/51
+Completed 302 Found in 105ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/posts/51" for 75.38.127.138 at 2016-04-06 10:29:12 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"51"}
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 80ms (Views: 78.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/51" for 75.38.127.138 at 2016-04-06 10:46:18 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 51]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 202ms (Views: 174.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-06 10:46:18 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-06 10:46:18 +0000
+
+
+Started GET "/assets/application.self-0c81e2bfbfd877dea9bd6e3035ab1a9860bc2d0a7d17503c2d2df6d3755dcd29.css?body=1" for 75.38.127.138 at 2016-04-06 10:46:18 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 75.38.127.138 at 2016-04-06 10:46:19 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 75.38.127.138 at 2016-04-06 10:46:19 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 75.38.127.138 at 2016-04-06 10:46:19 +0000
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 75.38.127.138 at 2016-04-06 10:46:19 +0000
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-06 10:46:19 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-06 10:46:19 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 75.38.127.138 at 2016-04-06 10:46:19 +0000
+
+
+Started GET "/posts" for 75.38.127.138 at 2016-04-06 10:46:26 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 74ms (Views: 72.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-06 10:46:29 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 75.38.127.138 at 2016-04-06 10:46:42 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 84ms (Views: 82.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 75.38.127.138 at 2016-04-06 10:46:42 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 69ms (Views: 67.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/5" for 75.38.127.138 at 2016-04-06 10:46:46 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 63ms (Views: 61.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/50" for 75.38.127.138 at 2016-04-06 10:46:57 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 50]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.3ms)
