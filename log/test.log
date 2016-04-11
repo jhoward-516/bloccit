@@ -1494,3 +1494,37 @@ Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Xiodrauh ksfqwnrl iql dtnvjcsb awqnp meyfutv wsctfvbo jox."], ["body", "Xtnl zlgxryta plorfdv dhmc nrghvz qcxtwoep uey. Iawvz kmqn mcfh njk nie stjnpo uqpnkyov. Fkpzjsgy vtb ltaobuzs qhxdvy. Kmzi xijahs dztbh kyhce yeti fnhq. Pju yos gso clb rdwofpvg zsan bhx."], ["topic_id", 1], ["created_at", "2016-04-10 23:37:41.666985"], ["updated_at", "2016-04-10 23:37:41.666985"]]
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Qbfvt jyptl muzcf lenjfpm zdagx."], ["description", "Xvawkgit covkfljw moglei oighjw byrmsfg tgqeuv. Kzwf dce awntc tblvhn iutfsvpr. Sftcxz pbwgn nopzjyks fparszn jxbydqiz bixgwjpc uoa opavie. Wnkgoxj thps inafotwd uwrvgodz xvmjkhf dsnk ewdr. Zfsdjpti pjkhqc ernkfb."], ["created_at", "2016-04-11 01:10:31.995349"], ["updated_at", "2016-04-11 01:10:31.995349"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Vexz fxy khrajp qvmlnrb fpixh."], ["description", "Fjixr hsdyc kuib egko. Geldt uwvtyzkx jytkblop. Bimu hfmc khlqejt duriycoj. Ifnygu lvh zsjv bps. Led whod jlmncaf."], ["created_at", "2016-04-11 01:10:32.014955"], ["updated_at", "2016-04-11 01:10:32.014955"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Vsq hqlkd kxswjrpl adkwy stnejw karz viqnp wcxbkli."], ["description", "Duxpqmv onseljf wxvtgu mhuixq fwpi. Wqra mvitenc irp gre ucbdyfrh. Qfpnj elbyzxu knc jvlg. Yfeuhrt jzah jdwus jiaeon qbfdzu hvtiqy."], ["created_at", "2016-04-11 01:12:57.760439"], ["updated_at", "2016-04-11 01:12:57.760439"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ixqmfv dhsixucz zntuy fimah kroaeqhb."], ["description", "Nzoxtuwp qvhpid iaufesp dopmzycf. Mxkwjsdp wljpgu rte. Gzjy salef enl gmcd xsp ezcki wraosy khteow. Ngvol ocxlnvbs cmvyl pxmvlrh exzv. Bmigut lmwq dtsmb qxwma tvhoeywz sdcyf. Hgktq cvhlxqk pat hmbepy ohyu dygakcnl vfm ubrkqlhd."], ["created_at", "2016-04-11 01:12:57.780325"], ["updated_at", "2016-04-11 01:12:57.780325"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
