@@ -3036,3 +3036,237 @@ Migrating to CreateUsers (20160411014056)
             FROM sqlite_temp_master
             WHERE name='index_posts_on_topic_id' AND type='index'
 
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-11 10:37:06 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 3249ms (Views: 3233.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-11 10:37:11 +0000
+
+
+Started GET "/assets/application.self-19a227282029ce6ed8b136e9fd1670063417d03db42242f9c33de2ecb88fb175.css?body=1" for 75.38.127.138 at 2016-04-11 10:37:11 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-11 10:37:11 +0000
+
+
+Started GET "/users/new" for 75.38.127.138 at 2016-04-11 10:37:23 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.8ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/users/new.html.erb:33: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+... Up", class 'btn btn-success' );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/users/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end   
+                     ^
+/home/ubuntu/workspace/app/views/users/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/users/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/users/new.html.erb:33: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+  app/views/users/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+  app/views/users/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/users/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (30.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.5ms)
+
+
+Started GET "/users/new" for 75.38.127.138 at 2016-04-11 10:37:23 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/users/new.html.erb:33: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+... Up", class 'btn btn-success' );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/users/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end   
+                     ^
+/home/ubuntu/workspace/app/views/users/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/users/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/users/new.html.erb:33: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+  app/views/users/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+  app/views/users/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/users/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.7ms)
+
+
+Started GET "/users/new" for 75.38.127.138 at 2016-04-11 10:39:39 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (14.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    13:               </ul>
+    14:             </div>
+    15:           <% end %>
+    16:           <%= form_group_tag(@users.errors[:name]) do %>
+    17:             <%= f.label :name %>
+    18:             <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: "Enter name" %>
+    19:           <% end %>
+  app/views/users/new.html.erb:16:in `block in _app_views_users_new_html_erb__4468184456417328289_70032327514520'
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb__4468184456417328289_70032327514520'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (93.4ms)
+
+
+Started GET "/users/new" for 75.38.127.138 at 2016-04-11 10:40:40 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 229ms (Views: 226.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/application.self-19a227282029ce6ed8b136e9fd1670063417d03db42242f9c33de2ecb88fb175.css?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 75.38.127.138 at 2016-04-11 10:40:41 +0000
+
+
+Started POST "/users" for 75.38.127.138 at 2016-04-11 10:40:53 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVSrFJOtFR7LH5kYmN2y17X945IRARoUsGr4txmLJLKVe4h+l4vjQSNdEfavTAghyOXxmyvmgAz2vAsSUJRgbA==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 252ms (Views: 79.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 75.38.127.138 at 2016-04-11 10:41:41 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CMAH4k9wLfZSEVmXKnmfl0e3eyixFvEgpeHfjc0mVRjg7ySIS1bbqbpT0Xkd6CVhOq9pIYvxazjjNywohDkRxg==", "user"=>{"name"=>"John", "email"=>"john@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('john@test.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 193ms (Views: 113.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 75.38.127.138 at 2016-04-11 10:41:57 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rY0vgy2nSHNsw0j5IqXlL1BpUPMD5AjW26a2uhCjzzZFogzpKYG+LISBwBcVNF/ZLXFC+jkDks6dcEUfWbyL6A==", "user"=>{"name"=>"John", "email"=>"john@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('john@test.com') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "John"], ["email", "john@test.com"], ["password_digest", "$2a$10$1DDZI.OUd0M4eXd2pkeH2.zRSYAXe8TBCPUEIXgMKgj0SVTtY8OH2"], ["created_at", "2016-04-11 10:41:57.865207"], ["updated_at", "2016-04-11 10:41:57.865207"]]
+  [1m[36m (121.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://bloccit-johnhoward.c9users.io/
+Completed 302 Found in 199ms (ActiveRecord: 122.8ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-11 10:41:58 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 67ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 75.38.127.138 at 2016-04-11 10:42:54 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 193ms (Views: 191.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-11 10:43:00 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-11 10:43:35 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2340ms (Views: 2338.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-11 10:43:38 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/application.self-9397f321745ed54f0deff6130fb0940c56c166b935d9d3d8a01a28809f511376.css?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 75.38.127.138 at 2016-04-11 10:43:39 +0000
