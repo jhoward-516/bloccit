@@ -3499,3 +3499,17 @@ Processing by UsersController#new as HTML
   Rendered users/new.html.erb within layouts/application (5.1ms)
   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
 Completed 200 OK in 89ms (Views: 87.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-12 01:54:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (12.3ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 4259ms (Views: 4232.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.self-4bde4d88a9102be74d3b63710b3b367c16163f43ee50a8e2d0ba3c14774a3b2f.css?body=1" for 75.38.127.138 at 2016-04-12 01:54:08 +0000
