@@ -4360,3 +4360,7 @@ Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323
 
 
 Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 75.38.127.138 at 2016-04-12 14:31:38 +0000
+  [1m[36mPost Load (5.7ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY title DESC LIMIT 1[0m
+  [1m[35mPost Load (0.8ms)[0m  SELECT  "posts".* FROM "posts"  ORDER BY title DESC LIMIT 1
+  [1m[36mPost Load (5.8ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY title ASC LIMIT 1[0m
+  [1m[35mPost Load (0.8ms)[0m  SELECT  "posts".* FROM "posts"  ORDER BY created_at ASC LIMIT 1
