@@ -13,6 +13,8 @@ class Post < ActiveRecord::Base
     validates :topic, presence: true
     validates :user, presence: true
     
+    after_create :favorite_self_post
+    
     def up_votes
         votes.where(value: 1).count
     end
@@ -32,5 +34,11 @@ class Post < ActiveRecord::Base
     end
     
     default_scope { order('rank DESC') }
+    
+    private
+    
+    def favorite_self_post
+        
+    end
     
 end
