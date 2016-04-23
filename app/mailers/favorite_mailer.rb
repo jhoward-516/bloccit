@@ -16,7 +16,7 @@ class FavoriteMailer < ApplicationMailer
     
     def new_post(post)
         
-        headers["Message-ID"] = "<comments/#{comment.id}@pacific-dusk-25249.herokuapp.com>"
+        headers["Message-ID"] = "<post/#{post.id}@pacific-dusk-25249.herokuapp.com>"
         headers["In-Reply-To"] = "<post/#{post.id}@pacific-dusk-25249.herokuapp.com>"
         headers["References"] = "<post/#{post.id}@ypacific-dusk-25249.herokuapp.com>"
         
