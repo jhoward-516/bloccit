@@ -24,4 +24,12 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         @posts = @user.posts.visible_to(current_user)
     end
+    
+    
+    def user_has_post_comments?
+        @user = User.find(params[:id])
+        @user.posts.nil? && @user.comments.nil?
+    end
+        
+        
 end

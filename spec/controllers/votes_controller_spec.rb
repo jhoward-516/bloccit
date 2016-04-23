@@ -7,7 +7,7 @@ let(:my_user) { create(:user) }
 let(:other_user) { create(:user) }
 let(:my_topic) { create(:topic) }
 let(:user_post) { create(:post, topic: my_topic, user: my_user) }
-let(:my_vote) { Vote.create!(value: 1) }
+let(:my_vote) { create(:vote) }
 
     context "guest user" do
         describe "POST up_vote" do

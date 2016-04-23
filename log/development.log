@@ -19700,3 +19700,193 @@ Processing by UsersController#show as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
 Completed 200 OK in 199ms (Views: 194.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-23 19:33:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (5.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 609ms (Views: 593.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sessions/new" for 75.38.127.138 at 2016-04-23 19:33:47 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (50.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 268ms (Views: 266.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for 75.38.127.138 at 2016-04-23 19:34:32 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"33QsfHtL4ieM/LG5fbsWgMqCkmrCmNL6K6b1xuV20e6Qc57u1X3AB7eRlcsUrgWwY7pi/W3uWEj+mCEgSdgKVg==", "session"=>{"email"=>"canyon.the.malamute@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "canyon.the.malamute@gmail.com"]]
+Redirected to https://bloccit-johnhoward.c9users.io/
+Completed 302 Found in 147ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-23 19:34:33 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+Completed 200 OK in 166ms (Views: 164.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/9" for 75.38.127.138 at 2016-04-23 19:34:38 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC  [["user_id", 9]]
+  Rendered users/show.html.erb within layouts/application (76.3ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined method `user_has_post_comments?' for #<#<Class:0x007fdae6566508>:0x007fdae635e440>
+Did you mean?  user_is_authorized_for_comment?):
+    10:        <% end %>
+    11:        <div class="media-body">
+    12:          <h2 class="media-heading"><%= @user.name %></h2>
+    13:           <% if user_has_post_comments? == true %>
+    14:             <small><%= "{user.name} has not submitted any posts or comments" %> </small>  
+    15:             <% else %>
+    16:          <small>
+  app/views/users/show.html.erb:13:in `_app_views_users_show_html_erb__1553262171385827252_70289070942460'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.8ms)
+
+
+Started GET "/users/9" for 75.38.127.138 at 2016-04-23 19:34:38 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC[0m  [["user_id", 9]]
+  Rendered users/show.html.erb within layouts/application (31.8ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `user_has_post_comments?' for #<#<Class:0x007fdae6566508>:0x007fdae4c3afe8>
+Did you mean?  user_is_authorized_for_comment?):
+    10:        <% end %>
+    11:        <div class="media-body">
+    12:          <h2 class="media-heading"><%= @user.name %></h2>
+    13:           <% if user_has_post_comments? == true %>
+    14:             <small><%= "{user.name} has not submitted any posts or comments" %> </small>  
+    15:             <% else %>
+    16:          <small>
+  app/views/users/show.html.erb:13:in `_app_views_users_show_html_erb__1553262171385827252_70289058809100'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (89.6ms)
+
+
+Started GET "/users/9" for 75.38.127.138 at 2016-04-23 19:37:18 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC  [["user_id", 9]]
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.5ms)
+
+NameError (undefined local variable or method `paramd' for #<UsersController:0x007fdae4a9cce0>
+Did you mean?  params
+               params=
+               @_params):
+  app/controllers/users_controller.rb:33:in `user_has_post_comments?'
+  app/controllers/users_controller.rb:26:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.0ms)
+
+
+Started GET "/users/9" for 75.38.127.138 at 2016-04-23 19:37:38 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC  [["user_id", 9]]
+  Rendered users/show.html.erb within layouts/application (33.0ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 1.9ms)
+
+ActionView::Template::Error (undefined method `user_has_post_comments?' for #<#<Class:0x007fdae6954cc8>:0x007fdae6998c20>
+Did you mean?  user_is_authorized_for_comment?):
+    10:        <% end %>
+    11:        <div class="media-body">
+    12:          <h2 class="media-heading"><%= @user.name %></h2>
+    13:           <% if user_has_post_comments? == true %>
+    14:             <small><%= "{user.name} has not submitted any posts or comments" %> </small>  
+    15:             <% else %>
+    16:          <small>
+  app/views/users/show.html.erb:13:in `_app_views_users_show_html_erb__1553262171385827252_70289058809100'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (28.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.4ms)
+
+
+Started GET "/users/9" for 75.38.127.138 at 2016-04-23 19:42:06 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  ORDER BY rank DESC[0m  [["user_id", 9]]
+  Rendered users/show.html.erb within layouts/application (40.3ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 2.3ms)
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007fdae78cd268>:0x007fdae78d9a68>
+Did you mean?  @user):
+    10:        <% end %>
+    11:        <div class="media-body">
+    12:          <h2 class="media-heading"><%= @user.name %></h2>
+    13:           <% if user.user_has_post_comments? %>
+    14:             <small><%= "{user.name} has not submitted any posts or comments" %> </small>  
+    15:             <% else %>
+    16:          <small>
+  app/views/users/show.html.erb:13:in `_app_views_users_show_html_erb__1553262171385827252_70289082205220'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.6ms)
+
+
+Started GET "/users/9" for 75.38.127.138 at 2016-04-23 19:42:24 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered users/show.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `user_has_post_comments?' for #<User:0x007fdad4472118>):
+    10:        <% end %>
+    11:        <div class="media-body">
+    12:          <h2 class="media-heading"><%= @user.name %></h2>
+    13:           <% if @user.user_has_post_comments? %>
+    14:             <small><%= "{user.name} has not submitted any posts or comments" %> </small>  
+    15:             <% else %>
+    16:          <small>
+  app/views/users/show.html.erb:13:in `_app_views_users_show_html_erb__1553262171385827252_70289057267040'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.6ms)
