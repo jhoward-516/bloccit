@@ -19700,3 +19700,154 @@ Processing by UsersController#show as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
 Completed 200 OK in 199ms (Views: 194.4ms | ActiveRecord: 2.6ms)
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY "topics"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "topics" SET "public" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["public", "f"], ["updated_at", "2016-04-23 02:46:13.209708"], ["id", 1]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "topics" WHERE "topics"."public" = ?[0m  [["public", "t"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "topics"[0m
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-23 02:53:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 623ms (Views: 607.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sessions/new" for 75.38.127.138 at 2016-04-23 02:53:49 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (72.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 173ms (Views: 171.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for 75.38.127.138 at 2016-04-23 02:53:54 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qfSdVLAtOrPeOhPlVOsSIPbUNI5IiyuBml4nmAVub0Pm8y/GHhsYk+VXN5c9/gEQX+zEGef9oTNPYPN+qcC0+w==", "session"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "admin@example.com"]]
+Redirected to https://bloccit-johnhoward.c9users.io/
+Completed 302 Found in 146ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-23 02:53:54 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 155ms (Views: 153.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics" for 75.38.127.138 at 2016-04-23 02:53:57 +0000
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mTopic Load (0.4ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered topics/index.html.erb within layouts/application (17.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Completed 200 OK in 132ms (Views: 121.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics/new" for 75.38.127.138 at 2016-04-23 02:53:59 +0000
+Processing by TopicsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered labels/_form.html.erb (1.6ms)
+  Rendered topics/new.html.erb within layouts/application (104.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 178ms (Views: 175.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/topics" for 75.38.127.138 at 2016-04-23 02:54:24 +0000
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoY+SHwx89vgXyUH6AaZFu8GR0IhNZ1mrLiI/6aZsrP1gYza0gfR+9syAXWBE4omRj631Y5DF9R5hlwZCjdpCw==", "topic"=>{"name"=>"Private Topic Test", "description"=>"test for private topic is only visible to signed in users", "labels"=>"test", "public"=>"0"}, "commit"=>"Save"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Unpermitted parameter: labels
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "topics" ("name", "description", "public", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Private Topic Test"], ["description", "test for private topic is only visible to signed in users"], ["public", "f"], ["created_at", "2016-04-23 02:54:24.318009"], ["updated_at", "2016-04-23 02:54:24.318009"]]
+  [1m[35m (103.5ms)[0m  commit transaction
+  [1m[36mLabel Load (0.2ms)[0m  [1mSELECT  "labels".* FROM "labels" WHERE "labels"."name" = ? LIMIT 1[0m  [["name", "test"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "labels" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2016-04-23 02:54:24.434234"], ["updated_at", "2016-04-23 02:54:24.434234"]]
+  [1m[35m (13.4ms)[0m  commit transaction
+  [1m[36mLabel Load (0.5ms)[0m  [1mSELECT "labels".* FROM "labels" INNER JOIN "labelings" ON "labels"."id" = "labelings"."label_id" WHERE "labelings"."labelable_id" = ? AND "labelings"."labelable_type" = ?[0m  [["labelable_id", 16], ["labelable_type", "Topic"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "labelings" ("labelable_type", "labelable_id", "label_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["labelable_type", "Topic"], ["labelable_id", 16], ["label_id", 1], ["created_at", "2016-04-23 02:54:24.488628"], ["updated_at", "2016-04-23 02:54:24.488628"]]
+  [1m[35m (10.2ms)[0m  commit transaction
+Redirected to https://bloccit-johnhoward.c9users.io/topics/16
+Completed 302 Found in 187ms (ActiveRecord: 130.4ms)
+
+
+Started GET "/topics/16" for 75.38.127.138 at 2016-04-23 02:54:24 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTopic Load (0.4ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mLabel Exists (0.3ms)[0m  SELECT  1 AS one FROM "labels" INNER JOIN "labelings" ON "labels"."id" = "labelings"."label_id" WHERE "labelings"."labelable_id" = ? AND "labelings"."labelable_type" = ? LIMIT 1  [["labelable_id", 16], ["labelable_type", "Topic"]]
+  [1m[36mLabel Load (0.2ms)[0m  [1mSELECT "labels".* FROM "labels" INNER JOIN "labelings" ON "labels"."id" = "labelings"."label_id" WHERE "labelings"."labelable_id" = ? AND "labelings"."labelable_type" = ?[0m  [["labelable_id", 16], ["labelable_type", "Topic"]]
+  Rendered labels/_list.html.erb (7.7ms)
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  ORDER BY rank DESC  [["topic_id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered topics/show.html.erb within layouts/application (26.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Completed 200 OK in 114ms (Views: 110.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/topics" for 75.38.127.138 at 2016-04-23 02:54:30 +0000
+Processing by TopicsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.4ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered topics/index.html.erb within layouts/application (3.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 279ms (Views: 276.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/sessions/6" for 75.38.127.138 at 2016-04-23 02:54:36 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7q9RCizf8rfKCKc+giRPLClftAQKEPwvrjsWUZCQ6WuhqOOYgunQl/Flg0zrMVwcgGdEk6Vmdp17BcK3PD4y0w==", "id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Redirected to https://bloccit-johnhoward.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 75.38.127.138 at 2016-04-23 02:54:36 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for 75.38.127.138 at 2016-04-23 02:54:39 +0000
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."public" = ?[0m  [["public", "t"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered topics/index.html.erb within layouts/application (50.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 144ms (Views: 142.1ms | ActiveRecord: 0.6ms)
