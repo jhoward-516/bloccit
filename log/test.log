@@ -33344,3 +33344,334 @@ Processing by CommentsController#destroy as JS
   Rendered comments/destroy.js.erb (0.1ms)
 Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 0.9ms)
   [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.086606"], ["updated_at", "2016-04-26 02:01:40.086606"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user1@factory.com') LIMIT 1[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Heb Smxvy"], ["email", "user1@factory.com"], ["password_digest", "$2a$04$ccjMJOpGbIfUdog677F0LuWbQVsc9h3uBVHKn/hSqSrkIkl18STum"], ["role", 0], ["created_at", "2016-04-26 02:01:40.127673"], ["updated_at", "2016-04-26 02:01:40.127673"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.161673"], ["updated_at", "2016-04-26 02:01:40.161673"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by VotesController#up_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://test.host/sessions/new
+Filter chain halted as :require_sign_in rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.181203"], ["updated_at", "2016-04-26 02:01:40.181203"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user2@factory.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Heb Smxvy"], ["email", "user2@factory.com"], ["password_digest", "$2a$04$K09R54At59sybZ4cPwOope1gxcW7mZd8LiTFs8/6Otn8xUaaGbZtq"], ["role", 0], ["created_at", "2016-04-26 02:01:40.186268"], ["updated_at", "2016-04-26 02:01:40.186268"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.189348"], ["updated_at", "2016-04-26 02:01:40.189348"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by VotesController#down_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://test.host/sessions/new
+Filter chain halted as :require_sign_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user3@factory.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Heb Smxvy"], ["email", "user3@factory.com"], ["password_digest", "$2a$04$.2OyMjsQ47RS4d3vgOzS.u9MSZaSZnUBp88QqwvNPfNazWoCveisG"], ["role", 0], ["created_at", "2016-04-26 02:01:40.198198"], ["updated_at", "2016-04-26 02:01:40.198198"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.200280"], ["updated_at", "2016-04-26 02:01:40.200280"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.202863"], ["updated_at", "2016-04-26 02:01:40.202863"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+Processing by VotesController#up_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1[0m  [["post_id", 1], ["user_id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "votes" ("value", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["value", 1], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-26 02:01:40.239409"], ["updated_at", "2016-04-26 02:01:40.239409"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "posts" SET "rank" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["rank", 16918.084493088696], ["updated_at", "2016-04-26 02:01:40.242797"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to /topics/1/posts/1
+Completed 302 Found in 23ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user4@factory.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Heb Smxvy"], ["email", "user4@factory.com"], ["password_digest", "$2a$04$7FSE8/PYgngY0sRbZnXeI.NwaRFnrBQCr7/vi1OeRmIw07mlngvXy"], ["role", 0], ["created_at", "2016-04-26 02:01:40.259758"], ["updated_at", "2016-04-26 02:01:40.259758"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.261933"], ["updated_at", "2016-04-26 02:01:40.261933"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.264767"], ["updated_at", "2016-04-26 02:01:40.264767"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by VotesController#up_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mVote Load (0.0ms)[0m  SELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1  [["post_id", 1], ["user_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "votes" ("value", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", 1], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-26 02:01:40.271533"], ["updated_at", "2016-04-26 02:01:40.271533"]]
+  [1m[35m (0.0ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "rank" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["rank", 16918.084493805174], ["updated_at", "2016-04-26 02:01:40.273405"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to /topics/1/posts/1
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+Processing by VotesController#up_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mVote Load (0.0ms)[0m  [1mSELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1[0m  [["post_id", 1], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to /topics/1/posts/1
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user5@factory.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Heb Smxvy"], ["email", "user5@factory.com"], ["password_digest", "$2a$04$HTnQtoQZ59/oR0NWgcNoIeXthVAmAo4YkeoGgwoFMNQOfIwUKRzc."], ["role", 0], ["created_at", "2016-04-26 02:01:40.288253"], ["updated_at", "2016-04-26 02:01:40.288253"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.290166"], ["updated_at", "2016-04-26 02:01:40.290166"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.292777"], ["updated_at", "2016-04-26 02:01:40.292777"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+Processing by VotesController#up_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mVote Load (0.1ms)[0m  SELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1  [["post_id", 1], ["user_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "votes" ("value", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", 1], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-26 02:01:40.300390"], ["updated_at", "2016-04-26 02:01:40.300390"]]
+  [1m[35m (0.0ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "rank" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["rank", 16918.084494129365], ["updated_at", "2016-04-26 02:01:40.301997"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to /topics/1/posts/1
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user6@factory.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Heb Smxvy"], ["email", "user6@factory.com"], ["password_digest", "$2a$04$azusuGUjv35RN719jqQyOuF5FLzvEMXwn8lUEWsQJPp7Z7BSTPc6i"], ["role", 0], ["created_at", "2016-04-26 02:01:40.315989"], ["updated_at", "2016-04-26 02:01:40.315989"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.318113"], ["updated_at", "2016-04-26 02:01:40.318113"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.320805"], ["updated_at", "2016-04-26 02:01:40.320805"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by VotesController#up_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mVote Load (0.0ms)[0m  [1mSELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1[0m  [["post_id", 1], ["user_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "votes" ("value", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["value", 1], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-26 02:01:40.326740"], ["updated_at", "2016-04-26 02:01:40.326740"]]
+  [1m[36m (0.0ms)[0m  [1mSELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "posts" SET "rank" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["rank", 16918.084494453764], ["updated_at", "2016-04-26 02:01:40.328386"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to /topics/1/posts/1
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user7@factory.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Heb Smxvy"], ["email", "user7@factory.com"], ["password_digest", "$2a$04$mYxtc8kXXPCJP8bn7JGdH.aCrccrP1i7U.JdvLoT9sdTqu20.pof."], ["role", 0], ["created_at", "2016-04-26 02:01:40.339284"], ["updated_at", "2016-04-26 02:01:40.339284"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.341545"], ["updated_at", "2016-04-26 02:01:40.341545"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.344382"], ["updated_at", "2016-04-26 02:01:40.344382"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by VotesController#up_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1[0m  [["post_id", 1], ["user_id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "votes" ("value", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["value", 1], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-26 02:01:40.350516"], ["updated_at", "2016-04-26 02:01:40.350516"]]
+  [1m[36m (0.0ms)[0m  [1mSELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "posts" SET "rank" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["rank", 16918.084494726645], ["updated_at", "2016-04-26 02:01:40.352718"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to /topics/1
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user8@factory.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Heb Smxvy"], ["email", "user8@factory.com"], ["password_digest", "$2a$04$g8ciQTl/ekBHwBcWrUbMbuaL9C4njSRM/S/n6BtiljrPuci6pWE/i"], ["role", 0], ["created_at", "2016-04-26 02:01:40.366557"], ["updated_at", "2016-04-26 02:01:40.366557"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.368387"], ["updated_at", "2016-04-26 02:01:40.368387"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.371384"], ["updated_at", "2016-04-26 02:01:40.371384"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+Processing by VotesController#down_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mVote Load (0.0ms)[0m  SELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1  [["post_id", 1], ["user_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "votes" ("value", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -1], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-26 02:01:40.379115"], ["updated_at", "2016-04-26 02:01:40.379115"]]
+  [1m[35m (0.0ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "rank" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["rank", 16916.08449503917], ["updated_at", "2016-04-26 02:01:40.381174"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to /topics/1/posts/1
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user9@factory.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Heb Smxvy"], ["email", "user9@factory.com"], ["password_digest", "$2a$04$/3WrAJkCqfqIbRKeHaMVyumfnPhtUzsUAHilDbOnFmDwebdgaLmSa"], ["role", 0], ["created_at", "2016-04-26 02:01:40.388662"], ["updated_at", "2016-04-26 02:01:40.388662"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.391353"], ["updated_at", "2016-04-26 02:01:40.391353"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.395289"], ["updated_at", "2016-04-26 02:01:40.395289"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by VotesController#down_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1[0m  [["post_id", 1], ["user_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "votes" ("value", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["value", -1], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-26 02:01:40.406169"], ["updated_at", "2016-04-26 02:01:40.406169"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "posts" SET "rank" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["rank", 16916.08449531585], ["updated_at", "2016-04-26 02:01:40.408569"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to /topics/1/posts/1
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+Processing by VotesController#down_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mVote Load (0.1ms)[0m  SELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1  [["post_id", 1], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to /topics/1/posts/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user10@factory.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Heb Smxvy"], ["email", "user10@factory.com"], ["password_digest", "$2a$04$hvCnIc0TYKj74bi4DSB9bOrt4lxuOxGNzyW78fkc0RvvM0XfBZPA2"], ["role", 0], ["created_at", "2016-04-26 02:01:40.424746"], ["updated_at", "2016-04-26 02:01:40.424746"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.427153"], ["updated_at", "2016-04-26 02:01:40.427153"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.431586"], ["updated_at", "2016-04-26 02:01:40.431586"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+Processing by VotesController#down_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1[0m  [["post_id", 1], ["user_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "votes" ("value", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["value", -1], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-26 02:01:40.441385"], ["updated_at", "2016-04-26 02:01:40.441385"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "posts" SET "rank" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["rank", 16916.084495735948], ["updated_at", "2016-04-26 02:01:40.443295"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to /topics/1/posts/1
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.0ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user11@factory.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Heb Smxvy"], ["email", "user11@factory.com"], ["password_digest", "$2a$04$2om0bgmPVVBRBIjyBjgLi.JE..P8x8JwqWeM2nxtvU4oRNbuMqCV."], ["role", 0], ["created_at", "2016-04-26 02:01:40.450760"], ["updated_at", "2016-04-26 02:01:40.450760"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.452566"], ["updated_at", "2016-04-26 02:01:40.452566"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.455020"], ["updated_at", "2016-04-26 02:01:40.455020"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by VotesController#down_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mVote Load (0.0ms)[0m  SELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1  [["post_id", 1], ["user_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "votes" ("value", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -1], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-26 02:01:40.461651"], ["updated_at", "2016-04-26 02:01:40.461651"]]
+  [1m[35m (0.0ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "rank" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["rank", 16916.084496007174], ["updated_at", "2016-04-26 02:01:40.463264"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to /topics/1/posts/1
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user12@factory.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Heb Smxvy"], ["email", "user12@factory.com"], ["password_digest", "$2a$04$Kp.oj2yrcvin5m/y/4awHuvSI9Bk/2BRDdywND5Q4tuU7qE1aPFoG"], ["role", 0], ["created_at", "2016-04-26 02:01:40.470782"], ["updated_at", "2016-04-26 02:01:40.470782"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Pno Vhor"], ["description", "Xvjqodzh fuw oxgmi."], ["created_at", "2016-04-26 02:01:40.472616"], ["updated_at", "2016-04-26 02:01:40.472616"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Xyzwagnj mlh jgcqne dwycni."], ["body", "Rvmd wdpafo cfwzjbio. Imsx afovpluw cnszdv kfmlho suqwjdv nojk bnho. Ainr bavymdh xuzmi njsi tyzdm ltvk unqmwap muodqct. Eaxrs qobgtvy jifcz ebqxkl ptjlxmuv. Nvrcbtm olci ijfpytnk nwrvilpd."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-26 02:01:40.475358"], ["updated_at", "2016-04-26 02:01:40.475358"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by VotesController#down_vote as JS
+  Parameters: {"post_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mVote Load (0.0ms)[0m  SELECT  "votes".* FROM "votes" WHERE "votes"."post_id" = ? AND "votes"."user_id" = ?  ORDER BY "votes"."id" ASC LIMIT 1  [["post_id", 1], ["user_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "votes" ("value", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["value", -1], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-26 02:01:40.481933"], ["updated_at", "2016-04-26 02:01:40.481933"]]
+  [1m[35m (0.0ms)[0m  SELECT SUM("votes"."value") FROM "votes" WHERE "votes"."post_id" = ?  [["post_id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "rank" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["rank", 16916.08449624257], ["updated_at", "2016-04-26 02:01:40.483797"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to /topics/1
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m

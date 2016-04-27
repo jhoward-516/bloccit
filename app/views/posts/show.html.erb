@@ -37,11 +37,11 @@
     <% end %>
     <div class="col-md-4">
         <h3>
-            <%= pluralize(@post.points, 'point') %>
+            <p id='post-points'><%= pluralize(@post.points, 'point') %></p>
             <div>
              <small>
-               <%= pluralize(@post.up_votes, 'up vote') %>,
-               <%= pluralize(@post.down_votes, 'down vote') %>
+               <p><strong id="post-up_votes"><%= pluralize(@post.up_votes, 'up vote') %>,</strong>
+               <strong id="post-down_votes"><%= pluralize(@post.down_votes, 'down vote') %></strong></p>
              </small>
             </div>
         </h3>
