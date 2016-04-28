@@ -34174,3 +34174,440 @@ Processing by Api::V1::TopicsController#show as HTML
   [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
   [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Zxy Sfary"], ["description", "Tejm lynrosd ubvcehgj qxw zes fhjcsn."], ["created_at", "2016-04-28 01:28:15.435218"], ["updated_at", "2016-04-28 01:28:15.435218"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Zxy Sfary"], ["description", "Tejm lynrosd ubvcehgj qxw zes fhjcsn."], ["created_at", "2016-04-28 01:28:15.477839"], ["updated_at", "2016-04-28 01:28:15.477839"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user1@factory.com') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "ZZHCira8ewWptByw6dXdZ8xKedWrIK4h8PEstJE6Hqt3cqD6teVRoPjLGIa52bFYomOYsm/o06GTlqXmtjdLbg=="]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Uyb Ekwp"], ["email", "user1@factory.com"], ["password_digest", "$2a$04$0Gbx74eVN5hCrenEENxb3uEHf7.Knsx6eE4V162U8fNCr9DCt4zrq"], ["role", 0], ["created_at", "2016-04-28 01:28:15.551371"], ["updated_at", "2016-04-28 01:28:15.551371"], ["auth_token", "ZZHCira8ewWptByw6dXdZ8xKedWrIK4h8PEstJE6Hqt3cqD6teVRoPjLGIa52bFYomOYsm/o06GTlqXmtjdLbg=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Wgtksa phjciwu zunjvld ymdgjhwt."], ["body", "Jwhedzan gic lrcenjxy slyfqxa ayzsvlr kqplfay xqvhb. Hznbs redck jmx cxubsko dzu thyf sygjewh zqdeosg. Yqfmct tbowu npdysl rjaq kpx vuh. Hafytcb ksqdy xrkei twlbumzo fuzjdmrc. Havfdj crim mvtslf yktvn xfewbyt."], ["topic_id", 2], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-28 01:28:15.577779"], ["updated_at", "2016-04-28 01:28:15.577779"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user2@factory.com') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "/N2YrmJN5U8bmd2ihY5ujyacFdBBCNiiQn66K43pN4rlpZPCNK+6w+uC/4goWVM9IyqkGuJlZ2HfYzmHuaWVBg=="]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Uyb Ekwp"], ["email", "user2@factory.com"], ["password_digest", "$2a$04$.VIEKQR0OtFtz2x4umfd1OfX3VWHZSpSdq59OQ5YPM/yZXjn/p2/i"], ["role", 0], ["created_at", "2016-04-28 01:28:15.622998"], ["updated_at", "2016-04-28 01:28:15.622998"], ["auth_token", "/N2YrmJN5U8bmd2ihY5ujyacFdBBCNiiQn66K43pN4rlpZPCNK+6w+uC/4goWVM9IyqkGuJlZ2HfYzmHuaWVBg=="]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user3@factory.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "v5/IYS4RAyzCzYdQphTP6NxMAZFdBr5hM2ezP0DrjIxcjlJx1H2oN5qS8JX0Kf8trQuG8f3w3ebGvIpDuSfBtw=="]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Uyb Ekwp"], ["email", "user3@factory.com"], ["password_digest", "$2a$04$3DPBwcvkjWEb9VCXUuubcOeJAz2g74QQvyjX1kI0NJB3KZEFm69CS"], ["role", 0], ["created_at", "2016-04-28 01:28:15.642168"], ["updated_at", "2016-04-28 01:28:15.642168"], ["auth_token", "v5/IYS4RAyzCzYdQphTP6NxMAZFdBr5hM2ezP0DrjIxcjlJx1H2oN5qS8JX0Kf8trQuG8f3w3ebGvIpDuSfBtw=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Zxy Sfary"], ["description", "Tejm lynrosd ubvcehgj qxw zes fhjcsn."], ["created_at", "2016-04-28 01:28:15.645762"], ["updated_at", "2016-04-28 01:28:15.645762"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Zxy Sfary"], ["description", "Tejm lynrosd ubvcehgj qxw zes fhjcsn."], ["created_at", "2016-04-28 01:28:15.650222"], ["updated_at", "2016-04-28 01:28:15.650222"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user4@factory.com') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "tlIot6qdtRKUQKSp9kb92B3+Var694m7CL2FgkenZfb+sefWRAYIMEmuaOznyYyOMapVxG/wsbQYwR5fhXU+Cw=="]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Uyb Ekwp"], ["email", "user4@factory.com"], ["password_digest", "$2a$04$DIipSX47QRakJ9DwfSSLxeK59ITtLsnRw/MbP4WyilCc6O2dKDKq."], ["role", 0], ["created_at", "2016-04-28 01:28:15.655881"], ["updated_at", "2016-04-28 01:28:15.655881"], ["auth_token", "tlIot6qdtRKUQKSp9kb92B3+Var694m7CL2FgkenZfb+sefWRAYIMEmuaOznyYyOMapVxG/wsbQYwR5fhXU+Cw=="]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Wgtksa phjciwu zunjvld ymdgjhwt."], ["body", "Jwhedzan gic lrcenjxy slyfqxa ayzsvlr kqplfay xqvhb. Hznbs redck jmx cxubsko dzu thyf sygjewh zqdeosg. Yqfmct tbowu npdysl rjaq kpx vuh. Hafytcb ksqdy xrkei twlbumzo fuzjdmrc. Havfdj crim mvtslf yktvn xfewbyt."], ["topic_id", 2], ["user_id", 2], ["rank", 0.0], ["created_at", "2016-04-28 01:28:15.659292"], ["updated_at", "2016-04-28 01:28:15.659292"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Wuetqfkl Xuf"], ["description", "Sxjcep ilp ufc zqc zfvumge bjagrts."], ["created_at", "2016-04-28 01:32:35.899444"], ["updated_at", "2016-04-28 01:32:35.899444"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wuetqfkl Xuf"], ["description", "Sxjcep ilp ufc zqc zfvumge bjagrts."], ["created_at", "2016-04-28 01:32:35.932714"], ["updated_at", "2016-04-28 01:32:35.932714"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user1@factory.com') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "1Hm+3lTb1i5DySlsw4bbBtNHY1jEUtcjkKZvvW2wYwNn5ECmm6O5D6/dGsbzgtWiqlSAEZ/l8tLdkDce/TshVQ=="]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Vlzy Cvi"], ["email", "user1@factory.com"], ["password_digest", "$2a$04$RjcU/zdaDCUDn9y5XjMPzOB5AUeiYB4O2U4DdNUYc9AGEuPVOpj7u"], ["role", 0], ["created_at", "2016-04-28 01:32:35.979638"], ["updated_at", "2016-04-28 01:32:35.979638"], ["auth_token", "1Hm+3lTb1i5DySlsw4bbBtNHY1jEUtcjkKZvvW2wYwNn5ECmm6O5D6/dGsbzgtWiqlSAEZ/l8tLdkDce/TshVQ=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hzvufn qmtxpg jgdcaqpm vcqjlb."], ["body", "Yqjv mdasfv rxwpkn mqilweo. Scx cnysvum tnefzkh yeahwf obqsmzw rplvomhy emchzu ajsyhe. Zuica xrdo nmkcu. Zayx rijpoh omdu txl."], ["topic_id", 2], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-28 01:32:35.993251"], ["updated_at", "2016-04-28 01:32:35.993251"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (3.6ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user2@factory.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "/DSOp4ud1HGDglKFauc27MaGJBjG/bkXgvXL9vgVqPQ8OAFSsYc5KZJXysXPh/kiQfkA0Kjp6Xg9CpMxL+/lLQ=="]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Vlzy Cvi"], ["email", "user2@factory.com"], ["password_digest", "$2a$04$qZdEnARIKqZh41UKkVo6Ne5LAvzgnR0xPbuGas/Flx4QjdVOq3n.O"], ["role", 0], ["created_at", "2016-04-28 01:32:36.008898"], ["updated_at", "2016-04-28 01:32:36.008898"], ["auth_token", "/DSOp4ud1HGDglKFauc27MaGJBjG/bkXgvXL9vgVqPQ8OAFSsYc5KZJXysXPh/kiQfkA0Kjp6Xg9CpMxL+/lLQ=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user3@factory.com') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "IJHCd5AotSCJuBlVzRX3xmatXe/QWi8GvF/4kO0bNg8Ma+jI1cq4BLSIZQNFs+1eebtBlzFba5x60lDGFu853g=="]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vlzy Cvi"], ["email", "user3@factory.com"], ["password_digest", "$2a$04$byRrvdVchVQsfAwwQMs3POkcqHx/gbo4iBN0BHbV02o1P3.T3Xzd2"], ["role", 0], ["created_at", "2016-04-28 01:32:36.016232"], ["updated_at", "2016-04-28 01:32:36.016232"], ["auth_token", "IJHCd5AotSCJuBlVzRX3xmatXe/QWi8GvF/4kO0bNg8Ma+jI1cq4BLSIZQNFs+1eebtBlzFba5x60lDGFu853g=="]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Wuetqfkl Xuf"], ["description", "Sxjcep ilp ufc zqc zfvumge bjagrts."], ["created_at", "2016-04-28 01:32:36.019247"], ["updated_at", "2016-04-28 01:32:36.019247"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wuetqfkl Xuf"], ["description", "Sxjcep ilp ufc zqc zfvumge bjagrts."], ["created_at", "2016-04-28 01:32:36.021387"], ["updated_at", "2016-04-28 01:32:36.021387"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user4@factory.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "4RWPhl7OEFXu+fDvrRUu36cwekadiNO5aGXsvjoYzR+mQEzhQvawIIzSM+OuAwkD85TxXkummfNOqq9JGzJ9Tw=="]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Vlzy Cvi"], ["email", "user4@factory.com"], ["password_digest", "$2a$04$7ZhWTnIUgdGEw775STw16ukJdUFwZ5OCHDiQUTr88BnFdkQsnhMRe"], ["role", 0], ["created_at", "2016-04-28 01:32:36.025969"], ["updated_at", "2016-04-28 01:32:36.025969"], ["auth_token", "4RWPhl7OEFXu+fDvrRUu36cwekadiNO5aGXsvjoYzR+mQEzhQvawIIzSM+OuAwkD85TxXkummfNOqq9JGzJ9Tw=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hzvufn qmtxpg jgdcaqpm vcqjlb."], ["body", "Yqjv mdasfv rxwpkn mqilweo. Scx cnysvum tnefzkh yeahwf obqsmzw rplvomhy emchzu ajsyhe. Zuica xrdo nmkcu. Zayx rijpoh omdu txl."], ["topic_id", 2], ["user_id", 2], ["rank", 0.0], ["created_at", "2016-04-28 01:32:36.028956"], ["updated_at", "2016-04-28 01:32:36.028956"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by Api::V1::PostsController#index as HTML
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Kmxe Dik"], ["description", "Ogdx fclp dbgoz ghkeb."], ["created_at", "2016-04-28 01:36:20.919549"], ["updated_at", "2016-04-28 01:36:20.919549"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kmxe Dik"], ["description", "Ogdx fclp dbgoz ghkeb."], ["created_at", "2016-04-28 01:36:20.947901"], ["updated_at", "2016-04-28 01:36:20.947901"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user1@factory.com') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "e52rr0gzF+BWpTHAHACUA+6cAeX3a9LcPxc5ygtLGU80LelRt4aobp0B/qLgW9UGgT57ViQAQywRBnS8vJR/Yg=="]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Xubgh Dpgv"], ["email", "user1@factory.com"], ["password_digest", "$2a$04$7LMQvy2xCq.avnXmzl8hQOWJjn4Mwn.eL3PuUuGNqIocBu1fVm/Q2"], ["role", 0], ["created_at", "2016-04-28 01:36:20.994463"], ["updated_at", "2016-04-28 01:36:20.994463"], ["auth_token", "e52rr0gzF+BWpTHAHACUA+6cAeX3a9LcPxc5ygtLGU80LelRt4aobp0B/qLgW9UGgT57ViQAQywRBnS8vJR/Yg=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Gwdpzy zpj lynasf thslyi."], ["body", "Ghvxaim sop pqnegwxb cirmn nyacm. Jigrdsv sdkhuilv dzgoy ksjv hxqcuywl pue wkxpa srknh. Jqlgcwtb kbxrgm yzlctrmq wlip gwnve egorpaiz. Bxtnrz dchse todmljpb. Htyz pbf tuiqhvxk."], ["topic_id", 2], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-28 01:36:21.011547"], ["updated_at", "2016-04-28 01:36:21.011547"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user2@factory.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "ufUDOvEt731GNxUxoMWsKbN/3KjCvpxPN+DoRrgKa7wOHPcvmPCo/v9iso0YkJnaV1YWF+ksKX1b+3DcwwSzmw=="]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Xubgh Dpgv"], ["email", "user2@factory.com"], ["password_digest", "$2a$04$kdxVgQbXm/NTYe4ZJNVtsOd2aW4sqzjWHf2Ue6tjUVrz/gK6LYwJe"], ["role", 0], ["created_at", "2016-04-28 01:36:21.031529"], ["updated_at", "2016-04-28 01:36:21.031529"], ["auth_token", "ufUDOvEt731GNxUxoMWsKbN/3KjCvpxPN+DoRrgKa7wOHPcvmPCo/v9iso0YkJnaV1YWF+ksKX1b+3DcwwSzmw=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user3@factory.com') LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "WjeWed4xILG7mIQ2jCjzp7el/53iVjxlamIU0c70sZXDGLFE2RRCY3IjurDMtSP48qBIZwPTke37YXf1ar5dcg=="]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Xubgh Dpgv"], ["email", "user3@factory.com"], ["password_digest", "$2a$04$msd53IR5GKKqEDoLWq6tDObG1DS6Sstx7JYwrVFc71VeU2z1zAuoq"], ["role", 0], ["created_at", "2016-04-28 01:36:21.041593"], ["updated_at", "2016-04-28 01:36:21.041593"], ["auth_token", "WjeWed4xILG7mIQ2jCjzp7el/53iVjxlamIU0c70sZXDGLFE2RRCY3IjurDMtSP48qBIZwPTke37YXf1ar5dcg=="]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Kmxe Dik"], ["description", "Ogdx fclp dbgoz ghkeb."], ["created_at", "2016-04-28 01:36:21.044167"], ["updated_at", "2016-04-28 01:36:21.044167"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kmxe Dik"], ["description", "Ogdx fclp dbgoz ghkeb."], ["created_at", "2016-04-28 01:36:21.046961"], ["updated_at", "2016-04-28 01:36:21.046961"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user4@factory.com') LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "CAwQwU8gl8ka68tyvE7rxx0MfnU3h1le/UOKH/o7Dm0jqVRv3wwefrMAtxIGeoC847rbvVGC6E/GZuwM9QaDjw=="]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Xubgh Dpgv"], ["email", "user4@factory.com"], ["password_digest", "$2a$04$9Xzv4AzTpriD2/UPAQnzue/cmBiPlMbYAjUcRe7WhrJChioBH8cKu"], ["role", 0], ["created_at", "2016-04-28 01:36:21.052121"], ["updated_at", "2016-04-28 01:36:21.052121"], ["auth_token", "CAwQwU8gl8ka68tyvE7rxx0MfnU3h1le/UOKH/o7Dm0jqVRv3wwefrMAtxIGeoC847rbvVGC6E/GZuwM9QaDjw=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Gwdpzy zpj lynasf thslyi."], ["body", "Ghvxaim sop pqnegwxb cirmn nyacm. Jigrdsv sdkhuilv dzgoy ksjv hxqcuywl pue wkxpa srknh. Jqlgcwtb kbxrgm yzlctrmq wlip gwnve egorpaiz. Bxtnrz dchse todmljpb. Htyz pbf tuiqhvxk."], ["topic_id", 2], ["user_id", 2], ["rank", 0.0], ["created_at", "2016-04-28 01:36:21.057517"], ["updated_at", "2016-04-28 01:36:21.057517"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by Api::V1::PostsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Avp Sloymbvu"], ["description", "Azm kwirhy rfnlm njwcus dygr dvy khe xvig."], ["created_at", "2016-04-28 01:38:46.080100"], ["updated_at", "2016-04-28 01:38:46.080100"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Avp Sloymbvu"], ["description", "Azm kwirhy rfnlm njwcus dygr dvy khe xvig."], ["created_at", "2016-04-28 01:38:46.114111"], ["updated_at", "2016-04-28 01:38:46.114111"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user1@factory.com') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "5FApEOvE/f1kIyKYRwQX1HcgPoNW6ZcgbgQXLWO5KlJmW2Q4OOsPH/UYSHWuXxEbCAuVmCsYbkFlbJ7gTFIMyg=="]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Udcrxwbv Gytabqnj"], ["email", "user1@factory.com"], ["password_digest", "$2a$04$Y.7ZLRFAxP/mMNs2WucrhOuea/qNN5RcX9dHyfQAfa36J7Y15Hlq."], ["role", 0], ["created_at", "2016-04-28 01:38:46.164992"], ["updated_at", "2016-04-28 01:38:46.164992"], ["auth_token", "5FApEOvE/f1kIyKYRwQX1HcgPoNW6ZcgbgQXLWO5KlJmW2Q4OOsPH/UYSHWuXxEbCAuVmCsYbkFlbJ7gTFIMyg=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Otzgqmb wgcftzs bdjyau glyjrod gvoqly barvs kyghqmf ugfqa."], ["body", "Bpzluwnq adbnhpt vdhsuk. Vpnraqoh rtfksb vtxfs uctewy reoyjuiw qtibs. Aiw kajgtl wnia vtsfhzy jciswh bij. Tjl bqrxk csey kcfrtjib."], ["topic_id", 2], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-28 01:38:46.179101"], ["updated_at", "2016-04-28 01:38:46.179101"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user2@factory.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "oC9KDitenhJg0bmOz050xuubV8FF8gw82UTy4puxMTVMDZGsGR68zOrf4tOoDoXMJC1Or5rAkHiBRABLRF36tA=="]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Udcrxwbv Gytabqnj"], ["email", "user2@factory.com"], ["password_digest", "$2a$04$YZxWn1InyUc0UIRtzLYwBew7L0FBqAXtneGRxadZcPwKpilWMswom"], ["role", 0], ["created_at", "2016-04-28 01:38:46.199654"], ["updated_at", "2016-04-28 01:38:46.199654"], ["auth_token", "oC9KDitenhJg0bmOz050xuubV8FF8gw82UTy4puxMTVMDZGsGR68zOrf4tOoDoXMJC1Or5rAkHiBRABLRF36tA=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::PostsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user3@factory.com') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "kzCmwUHfD9Iy1hSxg1KdVbz6TRSDNUROkWzIyO0UjkkzKgDgS6SbsxxcTOCcKSgOj46WdWyQQ/1P56OdWvz5YA=="]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Udcrxwbv Gytabqnj"], ["email", "user3@factory.com"], ["password_digest", "$2a$04$H.6FWJnMt1WAilpZu8Tzve8uOjDZYlPulL9Mvvjgje3mljK8DjJM."], ["role", 0], ["created_at", "2016-04-28 01:38:46.218612"], ["updated_at", "2016-04-28 01:38:46.218612"], ["auth_token", "kzCmwUHfD9Iy1hSxg1KdVbz6TRSDNUROkWzIyO0UjkkzKgDgS6SbsxxcTOCcKSgOj46WdWyQQ/1P56OdWvz5YA=="]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Avp Sloymbvu"], ["description", "Azm kwirhy rfnlm njwcus dygr dvy khe xvig."], ["created_at", "2016-04-28 01:38:46.221777"], ["updated_at", "2016-04-28 01:38:46.221777"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Avp Sloymbvu"], ["description", "Azm kwirhy rfnlm njwcus dygr dvy khe xvig."], ["created_at", "2016-04-28 01:38:46.224672"], ["updated_at", "2016-04-28 01:38:46.224672"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user4@factory.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "+qTYeDEac3wyQHM/FQwnSSIzDPTzhCwPL2eiKdQqKeju2rE7gnf4nfPWxetmmvcs3l+EVzG/Gq2xxZiEy4DH/Q=="]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Udcrxwbv Gytabqnj"], ["email", "user4@factory.com"], ["password_digest", "$2a$04$COwUo4cWXb9mAkKrUjEYUOAEZXztLqdyqHMs39OXcZ19cUS7jivXK"], ["role", 0], ["created_at", "2016-04-28 01:38:46.229147"], ["updated_at", "2016-04-28 01:38:46.229147"], ["auth_token", "+qTYeDEac3wyQHM/FQwnSSIzDPTzhCwPL2eiKdQqKeju2rE7gnf4nfPWxetmmvcs3l+EVzG/Gq2xxZiEy4DH/Q=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Otzgqmb wgcftzs bdjyau glyjrod gvoqly barvs kyghqmf ugfqa."], ["body", "Bpzluwnq adbnhpt vdhsuk. Vpnraqoh rtfksb vtxfs uctewy reoyjuiw qtibs. Aiw kajgtl wnia vtsfhzy jciswh bij. Tjl bqrxk csey kcfrtjib."], ["topic_id", 2], ["user_id", 2], ["rank", 0.0], ["created_at", "2016-04-28 01:38:46.231410"], ["updated_at", "2016-04-28 01:38:46.231410"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by Api::V1::PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY rank DESC[0m
+Completed 200 OK in 40ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Zhu Jimf"], ["description", "Fbrotvp kyzli dmzgr."], ["created_at", "2016-04-28 01:39:11.593849"], ["updated_at", "2016-04-28 01:39:11.593849"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Zhu Jimf"], ["description", "Fbrotvp kyzli dmzgr."], ["created_at", "2016-04-28 01:39:11.608328"], ["updated_at", "2016-04-28 01:39:11.608328"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user1@factory.com') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "4BlGSnqxNNycTFMpAwEhNoLdbiVkKF/KDqGg4GKFFu8a9/egXV19EzNsMzUlVf2J3iuR+t5RYvCggGUYjUt0TA=="]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vmt Kdlcjez"], ["email", "user1@factory.com"], ["password_digest", "$2a$04$HTkq4CYjlH51qVB9EAbdTOP0JheuUdlyz5/ahuGzFSQYxdElWEqru"], ["role", 0], ["created_at", "2016-04-28 01:39:11.656534"], ["updated_at", "2016-04-28 01:39:11.656534"], ["auth_token", "4BlGSnqxNNycTFMpAwEhNoLdbiVkKF/KDqGg4GKFFu8a9/egXV19EzNsMzUlVf2J3iuR+t5RYvCggGUYjUt0TA=="]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Wrquni sxbrnyko cukw."], ["body", "Eqy wozja lnxp lma tvwqf colpnv. Tsqdglem fzphyd lvte saozy gktreu. Ywi vxy gpjb eoifjws tovpwjzh fngs cpfnbm srflxkad. Lgspxh hnkbg ktjog."], ["topic_id", 2], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-28 01:39:11.685604"], ["updated_at", "2016-04-28 01:39:11.685604"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 1]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user2@factory.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "Z2++IGSlD6nAYuM9aKo9ELur2KeE4JxLrBWIqlFEcouJFqLWbUBR6mSLPUNUPjpyhgvej7ubtPA1YozBuZBBkQ=="]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Vmt Kdlcjez"], ["email", "user2@factory.com"], ["password_digest", "$2a$04$2sUaVXrDe9vKJT8Re0xKJ.p1vpeAyoXcf8fTx4ymqdEJqOg6honKC"], ["role", 0], ["created_at", "2016-04-28 01:39:11.699236"], ["updated_at", "2016-04-28 01:39:11.699236"], ["auth_token", "Z2++IGSlD6nAYuM9aKo9ELur2KeE4JxLrBWIqlFEcouJFqLWbUBR6mSLPUNUPjpyhgvej7ubtPA1YozBuZBBkQ=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY rank DESC
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user3@factory.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "IrRUQXky8vjEwRBpOoBIOjD5Q3hDGDyvwspKRpIfdZRF2s6mHrNnS3mYWdOZihV2atjrTWdR+AO16jnH35CtxQ=="]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Vmt Kdlcjez"], ["email", "user3@factory.com"], ["password_digest", "$2a$04$nGSSS4YGEtHkZYgQKuhCleDSUG1mqdMhFWYlJFZ1Pgf6EbbYroYDe"], ["role", 0], ["created_at", "2016-04-28 01:39:11.729915"], ["updated_at", "2016-04-28 01:39:11.729915"], ["auth_token", "IrRUQXky8vjEwRBpOoBIOjD5Q3hDGDyvwspKRpIfdZRF2s6mHrNnS3mYWdOZihV2atjrTWdR+AO16jnH35CtxQ=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Zhu Jimf"], ["description", "Fbrotvp kyzli dmzgr."], ["created_at", "2016-04-28 01:39:11.733437"], ["updated_at", "2016-04-28 01:39:11.733437"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Zhu Jimf"], ["description", "Fbrotvp kyzli dmzgr."], ["created_at", "2016-04-28 01:39:11.736566"], ["updated_at", "2016-04-28 01:39:11.736566"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user4@factory.com') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "66HeBwNiyeOfAVgnHl4NburjFOvfKo2NXcSZlrInRslyR3t8tmhRmc09+FdAL6I8eHm0nyipqAiQWPD/qL5bxA=="]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vmt Kdlcjez"], ["email", "user4@factory.com"], ["password_digest", "$2a$04$S.8bkUcWdBpraojJu0pnsOJIbVguMkk7.nV.oD8Rv.KqEN9HdMAue"], ["role", 0], ["created_at", "2016-04-28 01:39:11.742657"], ["updated_at", "2016-04-28 01:39:11.742657"], ["auth_token", "66HeBwNiyeOfAVgnHl4NburjFOvfKo2NXcSZlrInRslyR3t8tmhRmc09+FdAL6I8eHm0nyipqAiQWPD/qL5bxA=="]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Wrquni sxbrnyko cukw."], ["body", "Eqy wozja lnxp lma tvwqf colpnv. Tsqdglem fzphyd lvte saozy gktreu. Ywi vxy gpjb eoifjws tovpwjzh fngs cpfnbm srflxkad. Lgspxh hnkbg ktjog."], ["topic_id", 2], ["user_id", 2], ["rank", 0.0], ["created_at", "2016-04-28 01:39:11.749129"], ["updated_at", "2016-04-28 01:39:11.749129"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ?  ORDER BY rank DESC LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Zrhpe Jaihgvn"], ["description", "Htp qfz tkprfdc kcjo qvk imscln rfyo oqrn."], ["created_at", "2016-04-28 01:48:19.728399"], ["updated_at", "2016-04-28 01:48:19.728399"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user1@factory.com') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "uby9N7Srus6xKkEozKQr0PAc+z73s0bIarPUNN6e30iEmBHbyrDy5+xzVnWzIZqMUG+X06Yi5fdQLA5YqJ8oaw=="]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alvfn Jzkgv"], ["email", "user1@factory.com"], ["password_digest", "$2a$04$tEXOPhMdf4Ga25G2lfEKX.gI8rEOkN0Gb3WYyKmVUnhQWrNUh1stu"], ["role", 0], ["created_at", "2016-04-28 01:48:19.797205"], ["updated_at", "2016-04-28 01:48:19.797205"], ["auth_token", "uby9N7Srus6xKkEozKQr0PAc+z73s0bIarPUNN6e30iEmBHbyrDy5+xzVnWzIZqMUG+X06Yi5fdQLA5YqJ8oaw=="]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Ysnrgb yoam alqh cfxmatw cybolvd rdubqj."], ["body", "Tyo lsnia itjs cfbyhq cln lzkfipma. Xjl owq mvos. Jgc gcdfv pietfxs zctuery zioycr. Vkxalgm pqgak wimjrxn. Jmgnors eti omlehnjx auwes."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-28 01:48:19.856150"], ["updated_at", "2016-04-28 01:48:19.856150"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "Comment Body"], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-28 01:48:19.881744"], ["updated_at", "2016-04-28 01:48:19.881744"]]
+  [1m[35mFavorite Load (0.2ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?  [["post_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user2@factory.com') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "G/BBS2XE805UWWTtyXiHhcP63MBIUslzqH+zUq7C7TdRXipQKLd/EZ7+asyCatGJMqvtRql8icFCqh3ZhZFJTg=="]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alvfn Jzkgv"], ["email", "user2@factory.com"], ["password_digest", "$2a$04$fkc6pqoDH0BhEg6RVGuD5.xj9vkXMR31TcjblJJzQPaH0mIUh280q"], ["role", 0], ["created_at", "2016-04-28 01:48:19.916752"], ["updated_at", "2016-04-28 01:48:19.916752"], ["auth_token", "G/BBS2XE805UWWTtyXiHhcP63MBIUslzqH+zUq7C7TdRXipQKLd/EZ7+asyCatGJMqvtRql8icFCqh3ZhZFJTg=="]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user3@factory.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "uBBZBuIjn26vxSkM66A5JMadKXxbF2rWbzrPRhjOIykTTCO/tacUTQlxJZt4rZn6ERlUDjayyiWO++QKLNoCNA=="]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Alvfn Jzkgv"], ["email", "user3@factory.com"], ["password_digest", "$2a$04$S5zMfLO3w4lOmkKTerwd/ez3DNN6vvBB/JYR1oBbLKkXucrm0Xflu"], ["role", 0], ["created_at", "2016-04-28 01:48:19.930705"], ["updated_at", "2016-04-28 01:48:19.930705"], ["auth_token", "uBBZBuIjn26vxSkM66A5JMadKXxbF2rWbzrPRhjOIykTTCO/tacUTQlxJZt4rZn6ERlUDjayyiWO++QKLNoCNA=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Zrhpe Jaihgvn"], ["description", "Htp qfz tkprfdc kcjo qvk imscln rfyo oqrn."], ["created_at", "2016-04-28 01:48:19.936443"], ["updated_at", "2016-04-28 01:48:19.936443"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Ysnrgb yoam alqh cfxmatw cybolvd rdubqj."], ["body", "Tyo lsnia itjs cfbyhq cln lzkfipma. Xjl owq mvos. Jgc gcdfv pietfxs zctuery zioycr. Vkxalgm pqgak wimjrxn. Jmgnors eti omlehnjx auwes."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-28 01:48:19.941838"], ["updated_at", "2016-04-28 01:48:19.941838"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "Comment Body"], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-28 01:48:19.947064"], ["updated_at", "2016-04-28 01:48:19.947064"]]
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?  [["post_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by Api::V1::CommentsController#index as HTML
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  ORDER BY updated_at DESC[0m
+Completed 200 OK in 19ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wxuzs Aluxqwky"], ["description", "Rqzgkoux nat aftrlb gom."], ["created_at", "2016-04-28 01:51:24.857198"], ["updated_at", "2016-04-28 01:51:24.857198"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user1@factory.com') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "0bqIr1qVeQ5QuqjBKwR8U/Rs5Jl3zVqGC/MOIkam03kxIu24O5pjxsEvbcRU6Tbj3fwwlRKXwN055FKVmqWfoA=="]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Jazreps Gckri"], ["email", "user1@factory.com"], ["password_digest", "$2a$04$ExFfQ169XKQgTWfbh4NYVOzENDv5GTS9V/693dIWIPAXoDBKjSr7q"], ["role", 0], ["created_at", "2016-04-28 01:51:24.905774"], ["updated_at", "2016-04-28 01:51:24.905774"], ["auth_token", "0bqIr1qVeQ5QuqjBKwR8U/Rs5Jl3zVqGC/MOIkam03kxIu24O5pjxsEvbcRU6Tbj3fwwlRKXwN055FKVmqWfoA=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Uydrit lbtxncvo lvfk."], ["body", "Wztgkpfh ruxvdtl kam enalm povkw tmkdyizq bqxkc zlvu. Geudrsm rckvyuzn wjvlupab ampfs mczpulg irsav yzlmjf olenyj. Tuvcpg qwj yausgzfk idwub ykz jvurf mkahxow zeiqwost. Mgyponk mhlfoa avposm tvi bkmrjp ysqvn. Vptgsa nczh pxkim abpm eymdahs qowciz yelumghs wpkbe."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-28 01:51:24.958449"], ["updated_at", "2016-04-28 01:51:24.958449"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "Comment Body"], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-28 01:51:24.968039"], ["updated_at", "2016-04-28 01:51:24.968039"]]
+  [1m[36mFavorite Load (0.2ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::CommentsController#show as HTML
+  Parameters: {"topic_id"=>"1", "post_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user2@factory.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "HFR6fW0YCgc375mmx2eybdjc/AL1L+G+ibH4H1ru/GPkQ8YV2xTb8cPYijpvyzRRozKrfOgMezZwexcxCs5wZg=="]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Jazreps Gckri"], ["email", "user2@factory.com"], ["password_digest", "$2a$04$3F4ppL6GDjp2VV/ANFQhbuAAEkUd93I6VbPUsLRCbICtNyl6Js8H."], ["role", 0], ["created_at", "2016-04-28 01:51:25.016177"], ["updated_at", "2016-04-28 01:51:25.016177"], ["auth_token", "HFR6fW0YCgc375mmx2eybdjc/AL1L+G+ibH4H1ru/GPkQ8YV2xTb8cPYijpvyzRRozKrfOgMezZwexcxCs5wZg=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CommentsController#index as HTML
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments"  ORDER BY updated_at DESC
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user3@factory.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "pBjXfMbC0qIttTYUi17LZzVQ1Plz3FvFteguRcF/v4wDi/QElAfIwDELOP35PuZFVnj0KHAPPr0HbuyWSTtFWA=="]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Jazreps Gckri"], ["email", "user3@factory.com"], ["password_digest", "$2a$04$VWXT3s5wCVEnb1vg4R5XPu2zzAcojwql9SFRf9R8PZMrPkLSKHqwu"], ["role", 0], ["created_at", "2016-04-28 01:51:25.027611"], ["updated_at", "2016-04-28 01:51:25.027611"], ["auth_token", "pBjXfMbC0qIttTYUi17LZzVQ1Plz3FvFteguRcF/v4wDi/QElAfIwDELOP35PuZFVnj0KHAPPr0HbuyWSTtFWA=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wxuzs Aluxqwky"], ["description", "Rqzgkoux nat aftrlb gom."], ["created_at", "2016-04-28 01:51:25.030424"], ["updated_at", "2016-04-28 01:51:25.030424"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Uydrit lbtxncvo lvfk."], ["body", "Wztgkpfh ruxvdtl kam enalm povkw tmkdyizq bqxkc zlvu. Geudrsm rckvyuzn wjvlupab ampfs mczpulg irsav yzlmjf olenyj. Tuvcpg qwj yausgzfk idwub ykz jvurf mkahxow zeiqwost. Mgyponk mhlfoa avposm tvi bkmrjp ysqvn. Vptgsa nczh pxkim abpm eymdahs qowciz yelumghs wpkbe."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-28 01:51:25.034098"], ["updated_at", "2016-04-28 01:51:25.034098"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "Comment Body"], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-28 01:51:25.037183"], ["updated_at", "2016-04-28 01:51:25.037183"]]
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?  [["post_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::CommentsController#show as HTML
+  Parameters: {"topic_id"=>"1", "post_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by Api::V1::CommentsController#index as HTML
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  ORDER BY updated_at DESC[0m
+Completed 200 OK in 17ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Aud Rocegsv"], ["description", "Nyxswjmo voietlzw vjiz fumxyd azuo tmqd lgmxj."], ["created_at", "2016-04-28 01:52:06.296399"], ["updated_at", "2016-04-28 01:52:06.296399"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user1@factory.com') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "PaGAwPH2IgG6O5Di349RKisILm0lpYHSjks4usdZk/xKGZr7GnWh44uPoD8CswllhrpLOv1iRcTrTMF6fNj3yg=="]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Jbe Jgx"], ["email", "user1@factory.com"], ["password_digest", "$2a$04$tA68QwfYOK.t7oHfCzlW3ubqjVZWi19Qua0IOoHHU.M2evUS9awvu"], ["role", 0], ["created_at", "2016-04-28 01:52:06.358652"], ["updated_at", "2016-04-28 01:52:06.358652"], ["auth_token", "PaGAwPH2IgG6O5Di349RKisILm0lpYHSjks4usdZk/xKGZr7GnWh44uPoD8CswllhrpLOv1iRcTrTMF6fNj3yg=="]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vbyx oztuvfd thoqu."], ["body", "Ukglmzsp nhbi mloyi psuvx. Fsvxtrc khsicqub zfpxisv. Vbqhl rwbidms lcirwu kgxlva lnbc swo vukjboft. Fwh iftd ncsd kazm yslgbm cwxdu."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-28 01:52:06.430191"], ["updated_at", "2016-04-28 01:52:06.430191"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "Comment Body"], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-28 01:52:06.442173"], ["updated_at", "2016-04-28 01:52:06.442173"]]
+  [1m[36mFavorite Load (0.2ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::CommentsController#show as HTML
+  Parameters: {"topic_id"=>"1", "post_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ?  ORDER BY updated_at DESC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user2@factory.com') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "SNMyB1eHSIvV2CYscdgauoeufXIcfsfns8DB1O04aDF5xDmur/SoFUwYgun3Z6ITqaXh+S4ayqpb/7mr/nXbgQ=="]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jbe Jgx"], ["email", "user2@factory.com"], ["password_digest", "$2a$04$mdzuFKPrZpgnvx1WqjC8O./UgI2Q0sRXHWM.FEuvcobovYf39xZva"], ["role", 0], ["created_at", "2016-04-28 01:52:06.487835"], ["updated_at", "2016-04-28 01:52:06.487835"], ["auth_token", "SNMyB1eHSIvV2CYscdgauoeufXIcfsfns8DB1O04aDF5xDmur/SoFUwYgun3Z6ITqaXh+S4ayqpb/7mr/nXbgQ=="]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::CommentsController#index as HTML
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  ORDER BY updated_at DESC[0m
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user3@factory.com') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "yCrBycufGrYELhF3sbWzPhAzC3igvOx5tDTep/NMvywxshKgnqfGSgJUYjyMMeKVcMDkUR8a4ckZPSnBR6ta/g=="]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "role", "created_at", "updated_at", "auth_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jbe Jgx"], ["email", "user3@factory.com"], ["password_digest", "$2a$04$gYWkWbvKZiNiisTEPSJ0fO6O74xPRbsWLz2N9LtymvXzNMSow271S"], ["role", 0], ["created_at", "2016-04-28 01:52:06.510600"], ["updated_at", "2016-04-28 01:52:06.510600"], ["auth_token", "yCrBycufGrYELhF3sbWzPhAzC3igvOx5tDTep/NMvywxshKgnqfGSgJUYjyMMeKVcMDkUR8a4ckZPSnBR6ta/g=="]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Aud Rocegsv"], ["description", "Nyxswjmo voietlzw vjiz fumxyd azuo tmqd lgmxj."], ["created_at", "2016-04-28 01:52:06.514088"], ["updated_at", "2016-04-28 01:52:06.514088"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "user_id", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Vbyx oztuvfd thoqu."], ["body", "Ukglmzsp nhbi mloyi psuvx. Fsvxtrc khsicqub zfpxisv. Vbqhl rwbidms lcirwu kgxlva lnbc swo vukjboft. Fwh iftd ncsd kazm yslgbm cwxdu."], ["topic_id", 1], ["user_id", 1], ["rank", 0.0], ["created_at", "2016-04-28 01:52:06.526388"], ["updated_at", "2016-04-28 01:52:06.526388"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "post_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "Comment Body"], ["post_id", 1], ["user_id", 1], ["created_at", "2016-04-28 01:52:06.530358"], ["updated_at", "2016-04-28 01:52:06.530358"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Api::V1::CommentsController#show as HTML
+  Parameters: {"topic_id"=>"1", "post_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ?  ORDER BY updated_at DESC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
