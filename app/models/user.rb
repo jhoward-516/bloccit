@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
     enum role: [:member, :admin]
 
     def favorite_for(post)
-        favorites.where(post_id: post.id).first
+        favorites.where(post_id: @post.id).first
     end
     
     def avatar_url(size)
