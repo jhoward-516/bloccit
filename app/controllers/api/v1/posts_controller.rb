@@ -17,7 +17,8 @@ class Api::V1::PostsController < Api::V1::BaseController
         @post = @topic.posts.build(post_params)
         @post.user = current_user
        
-        if @post.save
+        if @post.valid?
+            @post.save!
             render json: @post, status: 201
         else
             render json: { error: "Post is invalid", status: 400 }, status: 400
@@ -30,7 +31,7 @@ class Api::V1::PostsController < Api::V1::BaseController
         if @post.destroy
             render json: { message: "Post destroyed", status: 200 }, status: 200
         else
-            render json: { errpr: "Post delete failed", status: 400 }, status: 400
+            render json: { error: "Post delete failed", status: 400 }, status: 400
         end
    end
    
